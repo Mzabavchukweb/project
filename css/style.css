@@ -1455,7 +1455,26 @@ textarea {
     display: none;
   }
 
-  .beam-section {
+  .beam-diagram__inner {
+    flex-direction: column;
+    gap: 40px;
+    min-height: auto;
+    max-width: 400px;
+    padding: 0;
+  }
+
+  .beam-diagram__col {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .beam-diagram__center {
+    margin: 0;
+  }
+
+  .beam-svg {
     display: none;
   }
 }
