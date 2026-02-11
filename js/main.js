@@ -316,4 +316,72 @@
     });
   }
 
+  // ---- Card mouse-tracking spotlight effect ----
+  if (!prefersReducedMotion) {
+    var spotlightCards = document.querySelectorAll('.usecase-card, .capability-card');
+    spotlightCards.forEach(function (card) {
+      card.addEventListener('mousemove', function (e) {
+        var rect = card.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        card.style.background = 'radial-gradient(400px circle at ' + x + 'px ' + y + 'px, rgba(91, 138, 245, 0.06), var(--bg-2) 70%)';
+      });
+      card.addEventListener('mouseleave', function () {
+        card.style.background = '';
+      });
+    });
+  }
+
+  // ---- Hero panel subtle tilt on mouse move ----
+  if (!prefersReducedMotion) {
+    var heroPanel = document.querySelector('.hero-panel');
+    if (heroPanel) {
+      heroPanel.addEventListener('mousemove', function (e) {
+        var rect = heroPanel.getBoundingClientRect();
+        var x = (e.clientX - rect.left) / rect.width - 0.5;
+        var y = (e.clientY - rect.top) / rect.height - 0.5;
+        heroPanel.style.transform = 'perspective(800px) rotateY(' + (x * 3) + 'deg) rotateX(' + (-y * 3) + 'deg)';
+      });
+      heroPanel.addEventListener('mouseleave', function () {
+        heroPanel.style.transform = '';
+        heroPanel.style.transition = 'transform 0.5s ease';
+        setTimeout(function () { heroPanel.style.transition = ''; }, 500);
+      });
+    }
+  }
+
+  // ---- Active navigation section tracking ----
+  var navLinks = document.querySelectorAll('.topbar__link');
+  var sections = [];
+  navLinks.forEach(function (link) {
+    var href = link.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      var section = document.querySelector(href);
+      if (section) {
+        sections.push({ el: section, link: link });
+      }
+    }
+  });
+
+  if (sections.length > 0) {
+    var sectionObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var matchedSection = sections.find(function (s) { return s.el === entry.target; });
+        if (matchedSection) {
+          if (entry.isIntersecting) {
+            navLinks.forEach(function (l) { l.classList.remove('active'); });
+            matchedSection.link.classList.add('active');
+          }
+        }
+      });
+    }, {
+      threshold: 0.3,
+      rootMargin: '-60px 0px -40% 0px'
+    });
+
+    sections.forEach(function (s) {
+      sectionObserver.observe(s.el);
+    });
+  }
+
 })();
