@@ -1485,7 +1485,7 @@ textarea {
   .hero {
     padding-top: calc(var(--header-h) + 48px);
     padding-bottom: 64px;
-    min-height: auto;
+    min-height: 100vh;
   }
 
   .hero__title {
