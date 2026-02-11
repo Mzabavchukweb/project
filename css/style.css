@@ -888,11 +888,10 @@ textarea {
 /* ============================================================
    ANIMATED BEAM HUB DIAGRAM
    ============================================================ */
-.beam-diagram {
+.beam-section {
   position: relative;
-  width: 100%;
-  padding: 64px 0;
   overflow: hidden;
+  background: radial-gradient(ellipse at 50% 60%, rgba(91, 138, 245, 0.04) 0%, transparent 60%);
 }
 
 .beam-diagram__inner {
@@ -900,16 +899,16 @@ textarea {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-  min-height: 300px;
+  max-width: 900px;
+  margin: 48px auto 0;
+  min-height: 360px;
   padding: 0 24px;
 }
 
 .beam-diagram__col {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
   z-index: 2;
   flex: 0 0 auto;
   align-items: center;
@@ -918,15 +917,15 @@ textarea {
 .beam-diagram__center {
   z-index: 2;
   flex-shrink: 0;
-  margin: 0 60px;
+  margin: 0 72px;
 }
 
 .beam-node {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   border: 1px solid var(--border-light);
   background: var(--bg-2);
@@ -936,26 +935,98 @@ textarea {
   text-align: center;
   line-height: 1.2;
   position: relative;
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth), background var(--transition-smooth);
+}
+
+.beam-node--supplier {
+  background: linear-gradient(135deg, var(--bg-2) 0%, var(--bg-3) 100%);
+}
+
+.beam-node--supplier:hover {
+  transform: scale(1.12);
+  border-color: var(--accent);
+  box-shadow: 0 0 24px var(--accent-glow), 0 4px 16px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, var(--bg-3) 0%, rgba(91, 138, 245, 0.08) 100%);
+}
+
+.beam-node--supplier:hover svg {
+  color: var(--accent);
+}
+
+.beam-node--receiver {
+  background: linear-gradient(135deg, var(--bg-2) 0%, var(--bg-3) 100%);
+}
+
+.beam-node--receiver:hover {
+  transform: scale(1.12);
+  border-color: var(--green);
+  box-shadow: 0 0 24px rgba(62, 207, 142, 0.25), 0 4px 16px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, var(--bg-3) 0%, rgba(62, 207, 142, 0.08) 100%);
+}
+
+.beam-node--receiver:hover svg {
+  color: var(--green);
 }
 
 .beam-node--center {
-  width: 72px;
-  height: 72px;
+  width: 92px;
+  height: 92px;
   border-color: var(--accent);
-  background: var(--accent-dim);
+  background: radial-gradient(circle at 40% 35%, rgba(91, 138, 245, 0.2) 0%, var(--accent-dim) 100%);
   color: var(--accent);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
-  box-shadow: 0 0 40px rgba(91, 138, 245, 0.15);
+  box-shadow: 0 0 60px rgba(91, 138, 245, 0.2), 0 0 120px rgba(91, 138, 245, 0.08);
+  border-width: 2px;
+}
+
+.beam-node--center__text {
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.02em;
+}
+
+.beam-node--center__pulse {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1px solid rgba(91, 138, 245, 0.3);
+  animation: beamPulse 3s ease-in-out infinite;
+}
+
+.beam-node--center__pulse--2 {
+  inset: -18px;
+  border-color: rgba(91, 138, 245, 0.15);
+  animation-delay: 1s;
+}
+
+@keyframes beamPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
 }
 
 .beam-node__label {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--text-2);
   position: absolute;
-  bottom: -20px;
+  bottom: -24px;
   white-space: nowrap;
   font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-smooth);
+}
+
+.beam-node:hover .beam-node__label {
+  color: var(--text-0);
 }
 
 .beam-svg {
@@ -969,14 +1040,15 @@ textarea {
 
 .beam-path {
   fill: none;
-  stroke: var(--border);
-  stroke-width: 1;
+  stroke: var(--border-light);
+  stroke-width: 1.5;
+  opacity: 0.6;
 }
 
 .beam-dot {
-  r: 3;
+  r: 4;
   fill: var(--accent);
-  filter: drop-shadow(0 0 4px var(--accent));
+  filter: drop-shadow(0 0 6px var(--accent)) drop-shadow(0 0 12px rgba(91, 138, 245, 0.4));
 }
 
 /* ============================================================
@@ -1383,7 +1455,7 @@ textarea {
     display: none;
   }
 
-  .beam-diagram {
+  .beam-section {
     display: none;
   }
 }
