@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WTE Flow — Cross-Border Intake Coordination Desk</title>
+  <meta name="description"
+    content="WTE Flow coordinates RDF/SRF intake windows, specs, and lane constraints for Waste-to-Energy and cement planning teams across Europe.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ========== 1. STICKY TOP BAR ========== -->
+  <header class="topbar" id="topbar">
+    <div class="container topbar__inner">
+      <a href="#" class="topbar__brand">WTE Flow</a>
+      <nav class="topbar__nav">
+        <a href="#capabilities" class="topbar__link">Capabilities</a>
+        <a href="#how-it-works" class="topbar__link">How it works</a>
+        <a href="#specs" class="topbar__link">Specs</a>
+        <a href="#faq" class="topbar__link">FAQ</a>
+        <a href="#contact" class="topbar__link">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn--primary btn--sm topbar__cta desktop-only">Request availability</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#capabilities" class="mobile-nav__link">Capabilities</a>
+    <a href="#how-it-works" class="mobile-nav__link">How it works</a>
+    <a href="#specs" class="mobile-nav__link">Specs</a>
+    <a href="#faq" class="mobile-nav__link">FAQ</a>
+    <a href="#contact" class="mobile-nav__link">Contact</a>
+    <a href="#contact" class="btn btn--primary"
+      style="margin-top:16px;text-align:center;justify-content:center;">Request availability</a>
+  </div>
+
+  <!-- ========== 2. HERO ========== -->
+  <section class="hero" id="hero">
+    <!-- Animated grid pattern background -->
+    <div class="hero__grid-bg" id="hero-grid-bg">
+      <div class="hero__grid-bg-canvas" id="grid-canvas"></div>
+    </div>
+    <div class="container">
+      <div class="hero__grid">
+        <!-- Left column: message -->
+        <div class="hero__content">
+          <p class="hero__eyebrow">Waste-to-Energy Intake Coordination</p>
+          <h1 class="hero__title">We coordinate intake windows, specs, and lanes — so the plan holds.</h1>
+          <p class="hero__subtitle">Share your planned window and constraints. We align counterparties and keep the
+            intake plan current as availability changes.</p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary">Request availability</a>
+            <a href="#how-it-works" class="btn btn--secondary">How it works</a>
+          </div>
+          <!-- Micro-points -->
+          <div class="hero__micropoints">
+            <span class="hero__micropoint">
+              <span class="hero__micropoint-dot"></span>
+              Rapid feasibility checks
+            </span>
+            <span class="hero__micropoint">
+              <span class="hero__micropoint-dot"></span>
+              Spot slots + backup coverage
+            </span>
+            <span class="hero__micropoint">
+              <span class="hero__micropoint-dot"></span>
+              EU-wide counterparty mapping
+            </span>
+          </div>
+        </div>
+        <!-- Right column: info panel -->
+        <div class="hero-panel" id="hero-panel">
+          <div class="hero-panel__header">
+            <button class="hero-panel__tab active" data-panel="operators">Operators</button>
+            <button class="hero-panel__tab" data-panel="suppliers">Suppliers</button>
+          </div>
+          <div class="hero-panel__body">
+            <!-- Operators -->
+            <div class="hero-panel__content active" id="panel-operators">
+              <p class="hero-panel__section-label">Inputs we need</p>
+              <ul class="hero-panel__list">
+                <li class="hero-panel__item">Intake window(s) and volume band</li>
+                <li class="hero-panel__item">Specs: NCV, chlorine, moisture, particle size</li>
+                <li class="hero-panel__item">Delivery constraints and packaging requirements</li>
+              </ul>
+              <p class="hero-panel__section-label">What you get</p>
+              <ul class="hero-panel__list">
+                <li class="hero-panel__item">Pre-aligned counterparties matching your window and specs</li>
+                <li class="hero-panel__item">Ongoing alignment as availability shifts</li>
+                <li class="hero-panel__item">Weekly brief on confirmed coverage and open asks</li>
+              </ul>
+            </div>
+            <!-- Suppliers -->
+            <div class="hero-panel__content" id="panel-suppliers">
+              <p class="hero-panel__section-label">Inputs we need</p>
+              <ul class="hero-panel__list">
+                <li class="hero-panel__item">Available window(s) and volume band</li>
+                <li class="hero-panel__item">Specs: NCV, chlorine, moisture, particle size</li>
+                <li class="hero-panel__item">Lane constraints and handoff conditions</li>
+              </ul>
+              <p class="hero-panel__section-label">What you get</p>
+              <ul class="hero-panel__list">
+                <li class="hero-panel__item">Matched intake windows aligned to your availability</li>
+                <li class="hero-panel__item">Spec pre-check before counterparties commit resources</li>
+                <li class="hero-panel__item">Handoff coordination for smooth lane execution</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ANIMATED BEAM HUB DIAGRAM ========== -->
+  <div class="beam-diagram" id="beam-diagram">
+    <div class="container">
+      <div class="beam-diagram__inner" id="beam-container">
+        <!-- Left: Operators -->
+        <div class="beam-diagram__col" id="beam-left">
+          <div class="beam-node" id="bn-op1">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+            <span class="beam-node__label">WtE Plant</span>
+          </div>
+          <div class="beam-node" id="bn-op2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" />
+              <path d="M16 7V5a4 4 0 00-8 0v2" />
+            </svg>
+            <span class="beam-node__label">Cement Kiln</span>
+          </div>
+          <div class="beam-node" id="bn-op3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+            </svg>
+            <span class="beam-node__label">Planning</span>
+          </div>
+          <div class="beam-node" id="bn-op4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+            <span class="beam-node__label">Procurement</span>
+          </div>
+        </div>
+        <!-- Center: WTE Flow -->
+        <div class="beam-diagram__center" id="beam-center">
+          <div class="beam-node beam-node--center" id="bn-center">
+            WTE<br>Flow
+          </div>
+        </div>
+        <!-- Right: Suppliers -->
+        <div class="beam-diagram__col" id="beam-right">
+          <div class="beam-node" id="bn-sup1">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" />
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
+            </svg>
+            <span class="beam-node__label">RDF Supplier</span>
+          </div>
+          <div class="beam-node" id="bn-sup2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+            </svg>
+            <span class="beam-node__label">SRF Supplier</span>
+          </div>
+        </div>
+        <!-- SVG beams drawn by JS -->
+        <svg class="beam-svg" id="beam-svg"></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 3. WHAT TEAMS USE WTE FLOW FOR ========== -->
+  <section class="section section--alt" id="use-cases">
+    <div class="container">
+      <p class="eyebrow reveal">Use cases</p>
+      <h2 class="section-title reveal">What teams use WTE Flow for</h2>
+      <p class="section-subtitle reveal">Planning teams coordinate through us when standard channels create friction or
+        gaps.</p>
+      <div class="usecases__grid">
+        <!-- Card 1 -->
+        <div class="usecase-card reveal">
+          <div class="usecase-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 12l2 2 4-4" />
+              <circle cx="12" cy="12" r="10" />
+            </svg>
+          </div>
+          <p class="usecase-card__text">Backup coverage when a primary lane tightens</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="usecase-card reveal">
+          <div class="usecase-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h10M4 18h14" />
+            </svg>
+          </div>
+          <p class="usecase-card__text">Spec pre-alignment before counterparties commit resources</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="usecase-card reveal">
+          <div class="usecase-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          <p class="usecase-card__text">Discreet second option without broadcasting a tender</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="usecase-card reveal">
+          <div class="usecase-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <p class="usecase-card__text">Lane constraints mapping for planning decisions</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="usecase-card reveal">
+          <div class="usecase-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" />
+            </svg>
+          </div>
+          <p class="usecase-card__text">Hand-off coordination across parties — commercial and operational</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INLINE CTA 1 ========== -->
+  <div class="inline-cta">
+    <div class="container">
+      <span class="inline-cta__text">Ready to share your intake window?</span>
+      <a href="#contact" class="btn btn--primary btn--sm">Request availability</a>
+    </div>
+  </div>
+
+  <!-- ========== 4. CAPABILITIES ========== -->
+  <section class="section" id="capabilities">
+    <div class="container">
+      <p class="eyebrow reveal">Capabilities</p>
+      <h2 class="section-title reveal">What we coordinate</h2>
+      <p class="section-subtitle reveal">Desk scope — structured alignment across intake windows, specs, and lanes.</p>
+      <div class="capabilities__grid">
+        <!-- 1 -->
+        <div class="capability-card reveal">
+          <h3 class="capability-card__title">Availability mapping</h3>
+          <p class="capability-card__desc">We track live availability windows and delivery constraints across active
+            lanes.</p>
+        </div>
+        <!-- 2 -->
+        <div class="capability-card reveal">
+          <h3 class="capability-card__title">Spec verification</h3>
+          <p class="capability-card__desc">We align NCV, chlorine, moisture, and size before parties invest time.</p>
+        </div>
+        <!-- 3 -->
+        <div class="capability-card reveal">
+          <h3 class="capability-card__title">Lane coordination</h3>
+          <p class="capability-card__desc">We coordinate cross-border lanes, handoffs, and timing so coverage doesn't
+            break.</p>
+        </div>
+        <!-- 4 -->
+        <div class="capability-card reveal">
+          <h3 class="capability-card__title">Contingency routing</h3>
+          <p class="capability-card__desc">We prepare fallback options when a window slips or a lane tightens.</p>
+        </div>
+        <!-- 5 -->
+        <div class="capability-card reveal">
+          <h3 class="capability-card__title">Weekly alignment brief</h3>
+          <p class="capability-card__desc">A structured weekly brief: confirmed windows, at-risk coverage, and open
+            asks.</p>
+        </div>
+      </div>
+    </div>
+    <p class="scope-note reveal">We do not provide transport or compliance services. We coordinate and align
+      counterparties.</p>
+    </div>
+  </section>
+
+  <!-- ========== 5. HOW IT WORKS ========== -->
+  <section class="section section--alt" id="how-it-works">
+    <div class="container">
+      <p class="eyebrow reveal">Process</p>
+      <h2 class="section-title reveal">How it works</h2>
+      <p class="section-subtitle reveal">Four steps from initial intake to ongoing alignment. No legal or transport
+        commitments on our side.</p>
+      <div class="steps">
+        <!-- Step 1 -->
+        <div class="step reveal">
+          <div class="step__number">1</div>
+          <h3 class="step__title">Share window + constraints</h3>
+          <p class="step__desc">Submit your intake or availability window, volume band, specs, and any delivery
+            constraints. Minimum info to start.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="step reveal">
+          <div class="step__number">2</div>
+          <h3 class="step__title">Alignment pass</h3>
+          <p class="step__desc">We cross-reference windows, specs, and lane constraints against active counterparties to
+            identify alignment.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="step reveal">
+          <div class="step__number">3</div>
+          <h3 class="step__title">Introductions + handoff</h3>
+          <p class="step__desc">Once alignment is confirmed, we introduce the parties. Contracting and execution are
+            handled by you directly.</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="step reveal">
+          <div class="step__number">4</div>
+          <h3 class="step__title">Ongoing updates</h3>
+          <p class="step__desc">If required, we maintain a structured brief cadence — confirmed windows, at-risk
+            coverage, and open asks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 6. SPECS & CONSTRAINTS ========== -->
+  <section class="section" id="specs">
+    <div class="container">
+      <p class="eyebrow reveal">Parameters</p>
+      <h2 class="section-title reveal">Specs & constraints we work with</h2>
+      <p class="section-subtitle reveal">We speak the language of your plant and your lane.</p>
+      <div class="specs__grid reveal">
+        <!-- Specs column -->
+        <div class="specs-col">
+          <div class="specs-col__header">Material specs</div>
+          <div class="specs-col__body">
+            <div class="specs-row">
+              <span class="specs-row__label">NCV (Net Calorific Value)</span>
+              <span class="specs-row__value">MJ/kg</span>
+            </div>
+            <div class="specs-row">
+              <span class="specs-row__label">Chlorine (Cl)</span>
+              <span class="specs-row__value">% wt</span>
+            </div>
+            <div class="specs-row">
+              <span class="specs-row__label">Moisture</span>
+              <span class="specs-row__value">% wt</span>
+            </div>
+            <div class="specs-row">
+              <span class="specs-row__label">Particle size</span>
+              <span class="specs-row__value">mm</span>
+            </div>
+            <div class="specs-row">
+              <span class="specs-row__label">Contaminants</span>
+              <span class="specs-row__value">limits per spec</span>
+            </div>
+            <div class="specs-row">
+              <span class="specs-row__label">Packaging / Bale</span>
+              <span class="specs-row__value">type</span>
+            </div>
+          </div>
+        </div>
+        <!-- Operational constraints column -->
+        <div class="specs-col">
+          <div class="specs-col__header">Operational constraints</div>
+          <div class="specs-col__body">
+            <div class="specs-row">
+              <span class="specs-row__label">Unloading window</span>
+              <span class="specs-row__value">days / hours</span>
+            </div>
+            <div class="specs-row">
+              <span class="specs-row__label">Storage limits</span>
+              <span class="specs-row__value">tonnes / days</span>
+            </div>
+            <div class="specs-row">
+              <span class="specs-row__label">Minimum lot size</span>
+              <span class="specs-row__value">tonnes</span>
+            </div>
+            <div class="specs-row">
+              <span class="specs-row__label">Lane / cross-border constraints</span>
+              <span class="specs-row__value">per route</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Coverage line -->
+      <div class="coverage-line reveal">
+        <svg class="coverage-line__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="2" y1="12" x2="22" y2="12" />
+          <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+        </svg>
+        Europe (cross-border), feasibility dependent on requirements and timing.
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INLINE CTA 2 ========== -->
+  <div class="inline-cta">
+    <div class="container">
+      <span class="inline-cta__text">Share your constraints and let us map alignment.</span>
+      <a href="#contact" class="btn btn--primary btn--sm">Request availability</a>
+    </div>
+  </div>
+
+  <!-- ========== 7. FAQ ========== -->
+  <section class="section section--alt" id="faq">
+    <div class="container">
+      <p class="eyebrow reveal">FAQ</p>
+      <h2 class="section-title reveal">Common questions</h2>
+      <div class="faq__list">
+        <!-- Q1 -->
+        <div class="faq-item reveal">
+          <button class="faq-item__question" aria-expanded="false">
+            What exactly does WTE Flow do?
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">We coordinate intake windows, specs, and lane constraints between
+              operators and suppliers. We map availability, pre-align specs, and facilitate introductions. We do not
+              handle transport, compliance, legal representation, or final contracting — those are handled by the
+              parties directly.</div>
+          </div>
+        </div>
+        <!-- Q2 -->
+        <div class="faq-item reveal">
+          <button class="faq-item__question" aria-expanded="false">
+            Is this a tender or a marketplace?
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">No. WTE Flow is a coordination desk. We align counterparties discreetly
+              — without broadcasting availability publicly or running a competitive tender process.</div>
+          </div>
+        </div>
+        <!-- Q3 -->
+        <div class="faq-item reveal">
+          <button class="faq-item__question" aria-expanded="false">
+            What information do I need to start?
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">At minimum: your planned intake or availability window, volume band, key
+              specs (NCV, chlorine, moisture, size), and any delivery or lane constraints. You can share as much or as
+              little detail as you're comfortable with initially.</div>
+          </div>
+        </div>
+        <!-- Q4 -->
+        <div class="faq-item reveal">
+          <button class="faq-item__question" aria-expanded="false">
+            How quickly do you respond?
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">Typically within 1–2 business days after reviewing your window and
+              constraints. Response time depends on the complexity of the alignment needed.</div>
+          </div>
+        </div>
+        <!-- Q5 -->
+        <div class="faq-item reveal">
+          <button class="faq-item__question" aria-expanded="false">
+            Who handles regulatory compliance?
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">Regulatory compliance is handled by the contracting parties and their
+              providers. WTE Flow coordinates alignment — compliance, transport, and legal matters remain with the
+              parties involved.</div>
+          </div>
+        </div>
+        <!-- Q6 -->
+        <div class="faq-item reveal">
+          <button class="faq-item__question" aria-expanded="false">
+            What don't you do?
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">We do not arrange transport, handle compliance, provide legal
+              representation, or execute contracts. We also do not operate as a marketplace or tender process. Our scope
+              is coordination and alignment of windows, specs, and lane constraints.</div>
+          </div>
+        </div>
+        <!-- Q7 -->
+        <div class="faq-item reveal">
+          <button class="faq-item__question" aria-expanded="false">
+            Can I use WTE Flow as a backup to my existing supply lanes?
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">Yes. Planning teams frequently use us for contingency coverage —
+              pre-aligned fallback options that activate when a primary lane tightens or a window slips.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 8. CONTACT — DUAL-ENTRY FORM ========== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact__wrapper">
+        <p class="eyebrow reveal" style="text-align:center;">Intake request</p>
+        <h2 class="section-title reveal" style="text-align:center;">Request availability</h2>
+        <p class="section-subtitle reveal" style="text-align:center;margin:0 auto 40px;">Share your window and
+          constraints. We'll confirm next steps after reviewing.</p>
+
+        <!-- Toggle: Operator / Supplier -->
+        <div class="contact__toggle reveal" id="contact-toggle">
+          <button class="contact__toggle-btn active" data-form="operator">Operator (WtE / Cement)</button>
+          <button class="contact__toggle-btn" data-form="supplier">Supplier (RDF / SRF)</button>
+        </div>
+
+        <!-- OPERATOR FORM -->
+        <form class="contact-form active" id="form-operator" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="op-company">Company / Site name *</label>
+              <input type="text" id="op-company" name="company" required placeholder="e.g. Plant Wrocław">
+            </div>
+            <div class="form-group">
+              <label for="op-country">Country / Region *</label>
+              <input type="text" id="op-country" name="country" required placeholder="e.g. Poland / Lower Silesia">
+            </div>
+            <div class="form-group">
+              <label for="op-window">Intake window(s) *</label>
+              <input type="text" id="op-window" name="window" required placeholder="e.g. Q2 2026 or next 2–4 weeks">
+            </div>
+            <div class="form-group">
+              <label for="op-volume">Volume band *</label>
+              <input type="text" id="op-volume" name="volume" required placeholder="e.g. 500–1,000 t/month">
+            </div>
+            <div class="form-group form-group--full">
+              <label for="op-specs">Specs (NCV, Cl, moisture, size) *</label>
+              <textarea id="op-specs" name="specs" required
+                placeholder="e.g. NCV ≥ 14 MJ/kg, Cl < 1%, moisture < 25%, size < 80mm"></textarea>
+            </div>
+            <div class="form-group form-group--full">
+              <label for="op-constraints">Constraints (unloading, storage, packaging, other)</label>
+              <textarea id="op-constraints" name="constraints"
+                placeholder="e.g. Unloading Mon–Fri 6:00–18:00, max storage 3 days, bales preferred"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="op-name">Contact name *</label>
+              <input type="text" id="op-name" name="contact_name" required placeholder="Full name">
+            </div>
+            <div class="form-group">
+              <label for="op-email">Email *</label>
+              <input type="email" id="op-email" name="email" required placeholder="name@company.com">
+            </div>
+          </div>
+          <button type="submit" class="btn btn--primary form-submit" style="width:100%;justify-content:center;">Submit
+            intake request</button>
+          <p class="form-disclaimer">Coordination and alignment only. Contracting and execution are handled by the
+            parties.</p>
+        </form>
+
+        <!-- SUPPLIER FORM -->
+        <form class="contact-form" id="form-supplier" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="sup-company">Company *</label>
+              <input type="text" id="sup-company" name="company" required placeholder="Company name">
+            </div>
+            <div class="form-group">
+              <label for="sup-country">Country / Load origin *</label>
+              <input type="text" id="sup-country" name="country" required placeholder="e.g. Germany / NRW">
+            </div>
+            <div class="form-group">
+              <label for="sup-window">Available window(s) *</label>
+              <input type="text" id="sup-window" name="window" required placeholder="e.g. ongoing or March–April 2026">
+            </div>
+            <div class="form-group">
+              <label for="sup-volume">Volume band *</label>
+              <input type="text" id="sup-volume" name="volume" required placeholder="e.g. 200–500 t/month">
+            </div>
+            <div class="form-group form-group--full">
+              <label for="sup-specs">Specs (NCV, Cl, moisture, size) *</label>
+              <textarea id="sup-specs" name="specs" required
+                placeholder="e.g. NCV 12–16 MJ/kg, Cl 0.6%, moisture 20%, size 30–50mm"></textarea>
+            </div>
+            <div class="form-group form-group--full">
+              <label for="sup-constraints">Lane constraints / Handoff conditions</label>
+              <textarea id="sup-constraints" name="constraints"
+                placeholder="e.g. FCA plant gate, min 25t/truck, cross-border DE→PL, TFS required"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="sup-name">Contact name *</label>
+              <input type="text" id="sup-name" name="contact_name" required placeholder="Full name">
+            </div>
+            <div class="form-group">
+              <label for="sup-email">Email *</label>
+              <input type="email" id="sup-email" name="email" required placeholder="name@company.com">
+            </div>
+          </div>
+          <button type="submit" class="btn btn--primary form-submit" style="width:100%;justify-content:center;">Submit
+            availability</button>
+          <p class="form-disclaimer">Coordination and alignment only. Contracting and execution are handled by the
+            parties.</p>
+        </form>
+
+        <!-- Confirmation (hidden by default) -->
+        <div class="form-confirmation" id="form-confirmation">
+          <div class="form-confirmation__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
+          <p class="form-confirmation__title">Request received</p>
+          <p class="form-confirmation__text">We'll confirm next steps after reviewing your window and
+            constraints.<br>Typically within 1–2 business days.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 9. FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__brand">WTE Flow</span>
+      <span class="footer__disclaimer">Coordination and alignment only. Contracting and execution are handled by the
+        parties.</span>
+      <a href="mailto:contact@wteflow.com" class="footer__email">contact@wteflow.com</a>
+      <a href="https://calendly.com/wteflow" class="footer__calendly" target="_blank" rel="noopener">Schedule a call
+        ↗</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

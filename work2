@@ -1,0 +1,139 @@
+FINALNY BRIEF DLA FREELANCERA – copy-paste ready
+1) Project goal
+Build a heavy B2B corporate landing page for WTE Flow, positioned as a cross-border coordination desk for RDF/SRF intake planning across Europe. The site must communicate operational credibility (windows, specs, lane constraints) and drive qualified Operator/Supplier inquiries via a dual-entry intake form. This is not SaaS, not an agency site, and not e-commerce.
+2) Target audience
+Waste-to-Energy plant operators (planning / procurement / operations)
+
+
+Cement kilns (alternative fuels / sourcing / planning)
+
+
+MRF/MBT operators
+
+
+Professional RDF/SRF suppliers
+
+
+Traders / sourcing managers
+
+
+3) What the site is NOT
+Not a SaaS product (“demo”, “platform”, “AI” language is forbidden)
+
+
+Not an agency/service studio vibe
+
+
+Not eco storytelling / impact narrative
+
+
+No client logos, no fake partnerships, no unverifiable performance claims
+
+
+4) Required page structure (final)
+Sticky top bar: brand + nav + “Request availability” CTA
+
+
+Hero: clear definition + dual-entry clarity
+
+
+Replace “snapshot” with Operators/Suppliers info panel: “Inputs we need / What you get”
+
+
+“What teams use WTE Flow for” use-case section (no “Proof” label)
+
+
+Capabilities (5 cards with fixed copy provided below)
+
+
+How it works (4-step coordination flow)
+
+
+Specs & constraints section (industrial credibility anchor)
+
+
+FAQ (scope + typical questions)
+
+
+Contact section: dual-entry Buyer/Supplier form (qualification)
+
+
+Minimal footer: email + one neutral scope line
+
+
+5) UX/UI rules
+UI style: industrial / trading desk / corporate, dark theme, layered surfaces, crisp borders
+
+
+Primary goal: qualification > persuasion
+
+
+CTA: “Request availability” only (anchors to contact)
+
+
+Motion: subtle reveal/hover only; no flashy animations; respect reduced motion
+
+
+Mobile: clean stacking, dual entry as tabs or segmented control
+
+
+6) Fixed Capabilities copy (must be verbatim)
+Availability mapping
+ “We track live availability windows and delivery constraints across active lanes.”
+
+
+Spec verification
+ “We align NCV, chlorine, moisture, and size before parties invest time.”
+
+
+Lane coordination
+ “We coordinate cross-border lanes, handoffs, and timing so coverage doesn’t break.”
+
+
+Contingency routing
+ “We prepare fallback options when a window slips or a lane tightens.”
+
+
+Weekly alignment brief
+ “A structured weekly brief: confirmed windows, at-risk coverage, and open asks.”
+
+
+7) Copy rules
+Voice: WE, operational tone
+
+
+Forbidden words: broker, brokerage, intermediary services, “best/leading”, eco storytelling terms
+
+
+Allowed language: coordination desk, alignment, intake windows, specs, lane constraints, handoffs, counterparties
+
+
+8) Functional requirements
+Dual-entry intake form: Operator vs Supplier
+
+
+Required fields listed above
+
+
+Email delivery must work (existing integration stays)
+
+
+Disclaimers: single neutral line
+ “Coordination and alignment only. Contracting and execution are handled by the parties.”
+
+
+9) Success criteria (how owner will judge)
+In first 5 seconds, a WtE/cement operator understands: what this is and why it exists
+
+
+Page feels corporate, stable, heavy B2B, not template/startup
+
+
+Form submissions are qualified (windows/specs/constraints captured)
+
+
+No risky claims, no fake proof, no “eco” visuals
+
+
+Desktop and mobile both look controlled and professional
+

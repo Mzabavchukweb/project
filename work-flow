@@ -1,0 +1,498 @@
+I am not suggesting you copy and paste the entire text.
+There is a combination of “PROMPT and Freelancer Brief” here.
+
+
+Synteza strategiczna
+Positioning statement (klarowny)
+WTE Flow is a cross-border coordination desk that aligns RDF/SRF availability windows, specs, and lane constraints so Waste-to-Energy and cement planning teams can maintain reliable intake coverage.
+Jednozdaniowe wyjaśnienie czym jest biznes
+Market coordination desk: we align information, windows, specs and counterparties across active lanes — enabling stable intake planning without running a public tender.
+Co użytkownik ma zrozumieć w 5 sekund
+To nie jest SaaS i nie jest agencja.
+
+
+To jest desk operacyjny dla WtE/cement: okna przyjęć + spec + lane constraints.
+
+
+Skutek: plan trzyma się w czasie, bo ktoś ogarnia „alignment” zanim strony spalą czas na chaos.
+
+
+
+Architektura strony (FINALNA)
+Struktura ma prowadzić do kwalifikacji, nie do “perswazji”. Dual entry: Operator/Buyer i Supplier.
+1) Top bar (sticky)
+Cel: stabilność, desk-like, zero “brand theater”.
+ Co user ma zrozumieć: to jest operacyjny punkt kontaktu.
+ Elementy:
+Brand: WTE Flow
+
+
+Nav: Capabilities / How it works / Specs / FAQ / Contact
+
+
+CTA: Request availability (anchor do Contact)
+
+
+2) Hero (dual clarity + zero lania wody)
+Cel: definicja + “what this is” + “what to do now”.
+ User ma zrozumieć: alignment windows/specs/lanes — so the plan holds.
+ Układ:
+Eyebrow: WASTE-TO-ENERGY INTAKE COORDINATION
+
+
+Headline (krótkie): We coordinate intake windows, specs, and lanes — so the plan holds.
+
+
+Subhead (konkret): Share your planned window and constraints. We align counterparties and keep the intake plan current as availability changes.
+
+
+CTA primary: Request availability (Contact)
+
+
+CTA secondary: How it works
+
+
+Prawa strona (zamiast snapshot): “Inputs we need / What you get”
+Tab/segment: Operators | Suppliers
+
+
+Operators: Intake window(s), volume band, specs, delivery constraints
+
+
+Suppliers: Available window(s), specs, lane constraints, handoff conditions
+ To jest “desk UI”: konkret > storytelling.
+
+
+3) “What teams use WTE Flow for” (zamiast “Proof”)
+Cel: pokazać realne use-case’y bez claimów i bez udawania partnerstw.
+ User ma zrozumieć: po co to istnieje operacyjnie.
+ Treść: 4–6 krótkich kart:
+Backup coverage when a primary lane tightens
+
+
+Spec pre-alignment before counterparties commit resources
+
+
+Discreet second option without broadcasting a tender
+
+
+Lane constraints mapping for planning decisions
+
+
+Hand-off coordination across parties (commercial + operational)
+
+
+4) Capabilities (konkretne, spójne)
+Cel: zakres desk’u.
+ User ma zrozumieć: co dokładnie koordynujesz.
+ Karty (tytuły + opisy – final):
+Availability mapping — We track live availability windows and delivery constraints across active lanes.
+
+
+Spec verification — We align NCV, chlorine, moisture, and size before parties invest time.
+
+
+Lane coordination — We coordinate cross-border lanes, handoffs, and timing so coverage doesn’t break.
+
+
+Contingency routing — We prepare fallback options when a window slips or a lane tightens.
+
+
+Weekly alignment brief — A structured weekly brief: confirmed windows, at-risk coverage, and open asks.
+
+
+5) How it works (proces desk’owy)
+Cel: proces bez prawnych/transportowych zobowiązań.
+ User ma zrozumieć: “jak wygląda pierwszy tydzień współpracy”.
+ Kroki:
+Share window + constraints (minimum info)
+
+
+Alignment pass (windows/spec/lane constraints)
+
+
+Introductions + handoff to parties for contracting/execution
+
+
+Ongoing updates if required (brief cadence)
+
+
+6) Specs & constraints (sekcja obowiązkowa)
+Cel: heavy B2B credibility.
+ User ma zrozumieć: mówisz językiem rynku.
+ Forma: 2 kolumny:
+Specs: NCV, Cl, moisture, particle size, contaminants, packaging/bale
+
+
+Operational constraints: unloading window, storage limits, minimum lot sizes, lane/cross-border constraints
+
+
+To jest “anchor” dla WtE/cement.
+7) FAQ (krótkie, rzeczowe)
+Cel: zbić obiekcje bez marketingu.
+ User ma zrozumieć: co robicie / czego nie robicie, jak wygląda start.
+8) Contact (dual entry form)
+Cel: kwalifikacja + wstępna segmentacja.
+ User ma zrozumieć: to jest intake request, nie “zapytanie o ofertę”.
+9) Footer (minimal)
+Cel: corporate, bez długich disclaimers.
+ Zawartość: email + 1 linia neutralna o zakresie.
+
+Zasady UX i UI
+Styl UI (industrial / trading desk / corporate)
+Dark, neutral, “control room”: bg near-black, surfaces layered
+
+
+Typografia: jedna rodzina fontów (Geist Sans / Inter), wysoka czytelność
+
+
+Layout: szeroki grid, dużo “air”, precyzyjne separatory, brak ozdobników
+
+
+Elementy: karty jak “desk panels”, nie “landing page blocks”
+
+
+Ikony: proste, techniczne (stroke), bez ilustracji
+
+
+Logika UX
+Priorytet: kwalifikacja > konwersja
+
+
+Sekcje mają odpowiadać na:
+
+
+What is this?
+
+
+Is it relevant to my plant/kiln?
+
+
+What inputs do you need?
+
+
+What do I get back?
+
+
+What do you not do?
+
+
+CTA zawsze kieruje do intake (form)
+
+
+CTA: filtracja > ilość leadów
+Primary CTA: Request availability
+
+
+Secondary CTA: How it works
+
+
+Unikać: “Book a call”, “Get a demo”, “Start free”
+
+
+Motion (gdzie tak, gdzie nie)
+Tak: delikatne reveal na scroll, micro-hover na card/button, subtelny gradient drift
+
+
+Nie: framer-like animacje, parallax, flashy transitions
+
+
+Always respect reduced-motion.
+
+
+Mobile vs desktop
+Desktop: “desk UI” i dual entry klarowny
+
+
+Mobile: wszystko stackowane, bez skomplikowanych menu; segment Operators/Suppliers jako tabs lub select.
+
+
+Co ma wyglądać “stabilnie i solidnie” celowo
+Top bar: nie ma “cukierków”, ma być jak panel
+
+
+Sekcja Specs: ma wyglądać jak dokument/brief
+
+
+Formularz: nowoczesny, ale bez “startup vibe”
+
+
+
+Zasady content & copy
+Ton
+Operacyjny, rzeczowy, “planning & constraints”.
+
+
+Zero emocji, zero misji, zero “impact narrative”.
+
+
+Zakazane słowa / framing (twarde)
+broker / brokerage / intermediary / посредnictwo / services w tym sensie
+
+
+“best”, “leading”, “world-class”
+
+
+“AI”, “platform”, “SaaS”, “solution” (jeśli nie jest faktycznie produktem)
+
+
+“guarantee”, “we ensure”, twarde obietnice
+
+
+Dozwolony język
+coordination desk, alignment, intake planning, window, constraints, lane, handoff, counterparties, spec checkpoints, availability mapping, contingency options, alignment brief
+
+
+Jak opisywać specs i procesy
+Wyłącznie jako parametry wejściowe i constrainty
+
+
+Minimalne definicje, bez edukacji rynku
+
+
+“We align” / “We coordinate” / “We map” / “We pre-align”
+
+
+Zaufanie bez fałszywych dowodów
+“What we ask for” + “What you get back” + “Scope boundaries”
+
+
+Zero logotypów, zero “clients”, zero liczb
+
+
+Jeśli social proof: tylko neutralne (np. “Planning teams use us when…”)
+
+
+
+Wymagania funkcjonalne
+Formularz Buyer / Supplier (MUST)
+Tryb wyboru: Operator (WtE/Cement) vs Supplier (RDF/SRF).
+ Wymagane pola (Operator):
+Company / site name
+
+
+Country / region
+
+
+Intake window(s) (date range or “next 2–4 weeks”)
+
+
+Volume band (range)
+
+
+Specs (NCV, Cl, moisture, size) — jako pola lub tekstarea
+
+
+Constraints (unloading, storage, packaging, other)
+
+
+Contact name + email
+
+
+Wymagane pola (Supplier):
+Company
+
+
+Country / load origin
+
+
+Available window(s)
+
+
+Volume band
+
+
+Specs (NCV, Cl, moisture, size)
+
+
+Lane constraints / handoff conditions
+
+
+Contact name + email
+
+
+Logika odpowiedzi (copy, bez claimów):
+“We’ll confirm next steps after reviewing your window and constraints.”
+ Nie obiecuj twardo “24h”. Jeśli już: “typically within 1–2 business days” (bez gwarancji).
+
+
+Disclaimers (1 linia, neutralna)
+“Coordination and alignment only. Contracting and execution are handled by the parties.”
+
+
+Compliance awareness (bez prawniczych szczegółów)
+W FAQ: “Regulatory compliance is handled by the contracting parties and their providers.”
+
+
+
+Co robimy / czego nie robimy
+Robimy
+mapowanie dostępności i okien
+
+
+pre-alignment speców
+
+
+koordynację constraintów i handoffów w lane
+
+
+alignment brief (jeśli potrzeba)
+
+
+Nie robimy
+transportu
+
+
+compliance
+
+
+reprezentacji prawnej
+
+
+finalnego contracting’u
+
+
+“marketplace / tender platform”
+
+
+To musi być jasno powiedziane 1x (FAQ + krótka linia w footer), bez powtarzania w kółko.
+
+FINALNY BRIEF DLA FREELANCERA – copy-paste ready
+1) Project goal
+Build a heavy B2B corporate landing page for WTE Flow, positioned as a cross-border coordination desk for RDF/SRF intake planning across Europe. The site must communicate operational credibility (windows, specs, lane constraints) and drive qualified Operator/Supplier inquiries via a dual-entry intake form. This is not SaaS, not an agency site, and not e-commerce.
+2) Target audience
+Waste-to-Energy plant operators (planning / procurement / operations)
+
+
+Cement kilns (alternative fuels / sourcing / planning)
+
+
+MRF/MBT operators
+
+
+Professional RDF/SRF suppliers
+
+
+Traders / sourcing managers
+
+
+3) What the site is NOT
+Not a SaaS product (“demo”, “platform”, “AI” language is forbidden)
+
+
+Not an agency/service studio vibe
+
+
+Not eco storytelling / impact narrative
+
+
+No client logos, no fake partnerships, no unverifiable performance claims
+
+
+4) Required page structure (final)
+Sticky top bar: brand + nav + “Request availability” CTA
+
+
+Hero: clear definition + dual-entry clarity
+
+
+Replace “snapshot” with Operators/Suppliers info panel: “Inputs we need / What you get”
+
+
+“What teams use WTE Flow for” use-case section (no “Proof” label)
+
+
+Capabilities (5 cards with fixed copy provided below)
+
+
+How it works (4-step coordination flow)
+
+
+Specs & constraints section (industrial credibility anchor)
+
+
+FAQ (scope + typical questions)
+
+
+Contact section: dual-entry Buyer/Supplier form (qualification)
+
+
+Minimal footer: email + one neutral scope line
+
+
+5) UX/UI rules
+UI style: industrial / trading desk / corporate, dark theme, layered surfaces, crisp borders
+
+
+Primary goal: qualification > persuasion
+
+
+CTA: “Request availability” only (anchors to contact)
+
+
+Motion: subtle reveal/hover only; no flashy animations; respect reduced motion
+
+
+Mobile: clean stacking, dual entry as tabs or segmented control
+
+
+6) Fixed Capabilities copy (must be verbatim)
+Availability mapping
+ “We track live availability windows and delivery constraints across active lanes.”
+
+
+Spec verification
+ “We align NCV, chlorine, moisture, and size before parties invest time.”
+
+
+Lane coordination
+ “We coordinate cross-border lanes, handoffs, and timing so coverage doesn’t break.”
+
+
+Contingency routing
+ “We prepare fallback options when a window slips or a lane tightens.”
+
+
+Weekly alignment brief
+ “A structured weekly brief: confirmed windows, at-risk coverage, and open asks.”
+
+
+7) Copy rules
+Voice: WE, operational tone
+
+
+Forbidden words: broker, brokerage, intermediary services, “best/leading”, eco storytelling terms
+
+
+Allowed language: coordination desk, alignment, intake windows, specs, lane constraints, handoffs, counterparties
+
+
+8) Functional requirements
+Dual-entry intake form: Operator vs Supplier
+
+
+Required fields listed above
+
+
+Email delivery must work (existing integration stays)
+
+
+Disclaimers: single neutral line
+ “Coordination and alignment only. Contracting and execution are handled by the parties.”
+
+
+9) Success criteria (how owner will judge)
+In first 5 seconds, a WtE/cement operator understands: what this is and why it exists
+
+
+Page feels corporate, stable, heavy B2B, not template/startup
+
+
+Form submissions are qualified (windows/specs/constraints captured)
+
+
+No risky claims, no fake proof, no “eco” visuals
+
+
+Desktop and mobile both look controlled and professional
+
