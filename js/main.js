@@ -190,38 +190,6 @@
     });
   }
 
-  // ---- Animated grid pattern (hero background) ----
-  if (!prefersReducedMotion) {
-    var gridCanvas = document.getElementById('grid-canvas');
-    if (gridCanvas) {
-      var GRID_SIZE = 52;
-      var COLS = Math.ceil(gridCanvas.offsetWidth / GRID_SIZE);
-      var ROWS = Math.ceil(gridCanvas.offsetHeight / GRID_SIZE);
-
-      function spawnSquare() {
-        var sq = document.createElement('div');
-        sq.className = 'grid-square';
-        var col = Math.floor(Math.random() * COLS);
-        var row = Math.floor(Math.random() * ROWS);
-        sq.style.left = col * GRID_SIZE + 'px';
-        sq.style.top = row * GRID_SIZE + 'px';
-        gridCanvas.appendChild(sq);
-        sq.addEventListener('animationend', function () {
-          sq.remove();
-        });
-      }
-
-      setInterval(function () {
-        spawnSquare();
-      }, 400);
-
-      // Initial burst
-      for (var i = 0; i < 8; i++) {
-        setTimeout(spawnSquare, i * 150);
-      }
-    }
-  }
-
   // ---- Animated Beam Hub Diagram ----
   var beamSvg = document.getElementById('beam-svg');
   var beamContainer = document.getElementById('beam-container');

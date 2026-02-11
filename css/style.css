@@ -340,50 +340,31 @@ textarea {
   overflow: hidden;
 }
 
-/* Animated grid pattern background */
-.hero__grid-bg {
+/* Video background */
+.hero__video-wrap {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  pointer-events: none;
   z-index: 0;
-  mask-image: radial-gradient(600px circle at 50% 40%, white, transparent);
-  -webkit-mask-image: radial-gradient(600px circle at 50% 40%, white, transparent);
 }
 
-.hero__grid-bg-canvas {
+.hero__video {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.hero__video-overlay {
   position: absolute;
   inset: 0;
-}
-
-.grid-square {
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  border-radius: 4px;
-  background: var(--accent);
-  opacity: 0;
-  animation: gridPulse 3s ease-in-out forwards;
-}
-
-@keyframes gridPulse {
-  0% {
-    opacity: 0;
-  }
-
-  30% {
-    opacity: 0.15;
-  }
-
-  70% {
-    opacity: 0.08;
-  }
-
-  100% {
-    opacity: 0;
-  }
+  background: rgba(10, 10, 11, 0.7);
+  z-index: 1;
 }
 
 .hero .container {
