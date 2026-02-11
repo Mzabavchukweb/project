@@ -118,77 +118,7 @@
     </div>
   </section>
 
-  <!-- ========== ANIMATED BEAM HUB DIAGRAM ========== -->
-  <div class="beam-diagram" id="beam-diagram">
-    <div class="container">
-      <div class="beam-diagram__inner" id="beam-container">
-        <!-- Left: Operators -->
-        <div class="beam-diagram__col" id="beam-left">
-          <div class="beam-node" id="bn-op1">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-            <span class="beam-node__label">WtE Plant</span>
-          </div>
-          <div class="beam-node" id="bn-op2">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="7" width="20" height="14" rx="2" />
-              <path d="M16 7V5a4 4 0 00-8 0v2" />
-            </svg>
-            <span class="beam-node__label">Cement Kiln</span>
-          </div>
-          <div class="beam-node" id="bn-op3">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-              <polyline points="14 2 14 8 20 8" />
-            </svg>
-            <span class="beam-node__label">Planning</span>
-          </div>
-          <div class="beam-node" id="bn-op4">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-              stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 6v6l4 2" />
-            </svg>
-            <span class="beam-node__label">Procurement</span>
-          </div>
-        </div>
-        <!-- Center: WTE Flow -->
-        <div class="beam-diagram__center" id="beam-center">
-          <div class="beam-node beam-node--center" id="bn-center">
-            WTE<br>Flow
-          </div>
-        </div>
-        <!-- Right: Suppliers -->
-        <div class="beam-diagram__col" id="beam-right">
-          <div class="beam-node" id="bn-sup1">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="1" y="3" width="15" height="13" />
-              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
-              <circle cx="5.5" cy="18.5" r="2.5" />
-              <circle cx="18.5" cy="18.5" r="2.5" />
-            </svg>
-            <span class="beam-node__label">RDF Supplier</span>
-          </div>
-          <div class="beam-node" id="bn-sup2">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
-            </svg>
-            <span class="beam-node__label">SRF Supplier</span>
-          </div>
-        </div>
-        <!-- SVG beams drawn by JS -->
-        <svg class="beam-svg" id="beam-svg"></svg>
-      </div>
-    </div>
-  </div>
+
 
   <!-- ========== 3. WHAT TEAMS USE WTE FLOW FOR ========== -->
   <section class="section section--alt" id="use-cases">
@@ -250,7 +180,81 @@
     </div>
   </section>
 
-  <!-- ========== INLINE CTA 1 ========== -->
+  <!-- ========== ANIMATED BEAM HUB DIAGRAM ========== -->
+  <div class="beam-diagram" id="beam-diagram">
+    <div class="container">
+      <div class="beam-diagram__inner" id="beam-container">
+        <!-- Left: Suppliers (4) -->
+        <div class="beam-diagram__col" id="beam-left">
+          <div class="beam-node" id="bn-op1">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" />
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
+            </svg>
+            <span class="beam-node__label">Supplier</span>
+          </div>
+          <div class="beam-node" id="bn-op2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+            </svg>
+            <span class="beam-node__label">Supplier</span>
+          </div>
+          <div class="beam-node" id="bn-op3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" />
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
+            </svg>
+            <span class="beam-node__label">Supplier</span>
+          </div>
+          <div class="beam-node" id="bn-op4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+            </svg>
+            <span class="beam-node__label">Supplier</span>
+          </div>
+        </div>
+        <!-- Center: WTE Flow -->
+        <div class="beam-diagram__center" id="beam-center">
+          <div class="beam-node beam-node--center" id="bn-center">
+            WTE<br>Flow
+          </div>
+        </div>
+        <!-- Right: Receivers (2) -->
+        <div class="beam-diagram__col" id="beam-right">
+          <div class="beam-node" id="bn-sup1">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+            <span class="beam-node__label">WtE Plant</span>
+          </div>
+          <div class="beam-node" id="bn-sup2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" />
+              <path d="M16 7V5a4 4 0 00-8 0v2" />
+            </svg>
+            <span class="beam-node__label">Cement Kiln</span>
+          </div>
+        </div>
+        <!-- SVG beams drawn by JS -->
+        <svg class="beam-svg" id="beam-svg"></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- INLINE CTA BANNER 1 -->
   <div class="inline-cta">
     <div class="container">
       <span class="inline-cta__text">Ready to share your intake window?</span>
@@ -640,8 +644,7 @@
           </div>
           <button type="submit" class="btn btn--primary form-submit" style="width:100%;justify-content:center;">Submit
             availability</button>
-          <p class="form-disclaimer">Coordination and alignment only. Contracting and execution are handled by the
-            parties.</p>
+
         </form>
 
         <!-- Confirmation (hidden by default) -->
@@ -668,8 +671,7 @@
       <span class="footer__disclaimer">Coordination and alignment only. Contracting and execution are handled by the
         parties.</span>
       <a href="mailto:contact@wteflow.com" class="footer__email">contact@wteflow.com</a>
-      <a href="https://calendly.com/wteflow" class="footer__calendly" target="_blank" rel="noopener">Schedule a call
-        ↗</a>
+
     </div>
   </footer>
 
