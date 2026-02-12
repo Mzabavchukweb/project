@@ -51,70 +51,73 @@
       <div class="hero__video-overlay"></div>
     </div>
     <div class="container">
-      <div class="hero__grid">
-        <!-- Left column: message -->
-        <div class="hero__content">
-          <p class="hero__eyebrow">Waste-to-Energy Intake Coordination</p>
-          <h1 class="hero__title">We coordinate intake windows, specs, and lanes — so the plan holds.</h1>
-          <p class="hero__subtitle">Share your planned window and constraints. We align counterparties and keep the
-            intake plan current as availability changes.</p>
-          <div class="hero__actions">
-            <a href="#contact" class="btn btn--primary">Request availability</a>
-            <a href="#how-it-works" class="btn btn--secondary">How it works</a>
-          </div>
-          <!-- Micro-points -->
-          <div class="hero__micropoints">
-            <span class="hero__micropoint">
-              <span class="hero__micropoint-dot"></span>
-              Rapid feasibility checks
-            </span>
-            <span class="hero__micropoint">
-              <span class="hero__micropoint-dot"></span>
-              Spot slots + backup coverage
-            </span>
-            <span class="hero__micropoint">
-              <span class="hero__micropoint-dot"></span>
-              EU-wide counterparty mapping
-            </span>
-          </div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Waste-to-Energy Intake Coordination</p>
+        <h1 class="hero__title">We coordinate intake windows, specs, and lanes&nbsp;— so&nbsp;the&nbsp;plan&nbsp;holds.
+        </h1>
+        <p class="hero__subtitle">Share your planned window and constraints. We align counterparties and keep the
+          intake plan current as availability changes.</p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Request availability</a>
+          <a href="#how-it-works" class="btn btn--secondary">How it works</a>
         </div>
-        <!-- Right column: info panel -->
-        <div class="hero-panel" id="hero-panel">
-          <div class="hero-panel__header">
-            <button class="hero-panel__tab active" data-panel="operators">Operators</button>
-            <button class="hero-panel__tab" data-panel="suppliers">Suppliers</button>
+        <div class="hero__micropoints">
+          <span class="hero__micropoint">
+            <span class="hero__micropoint-dot"></span>
+            Rapid feasibility checks
+          </span>
+          <span class="hero__micropoint">
+            <span class="hero__micropoint-dot"></span>
+            Spot slots + backup coverage
+          </span>
+          <span class="hero__micropoint">
+            <span class="hero__micropoint-dot"></span>
+            EU-wide counterparty mapping
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 2b. INTAKE PANEL ========== -->
+  <section class="section intake-panel-section" id="intake-panel">
+    <div class="container">
+      <h2 class="section-title">What we need & what you get</h2>
+      <div class="hero-panel" id="hero-panel">
+        <div class="hero-panel__header">
+          <button class="hero-panel__tab active" data-panel="operators">Operators</button>
+          <button class="hero-panel__tab" data-panel="suppliers">Suppliers</button>
+        </div>
+        <div class="hero-panel__body">
+          <!-- Operators -->
+          <div class="hero-panel__content active" id="panel-operators">
+            <p class="hero-panel__section-label">Inputs we need</p>
+            <ul class="hero-panel__list">
+              <li class="hero-panel__item">Intake window(s) and volume band</li>
+              <li class="hero-panel__item">Specs: NCV, chlorine, moisture, particle size</li>
+              <li class="hero-panel__item">Delivery constraints and packaging requirements</li>
+            </ul>
+            <p class="hero-panel__section-label">What you get</p>
+            <ul class="hero-panel__list">
+              <li class="hero-panel__item">Pre-aligned counterparties matching your window and specs</li>
+              <li class="hero-panel__item">Ongoing alignment as availability shifts</li>
+              <li class="hero-panel__item">Weekly brief on confirmed coverage and open asks</li>
+            </ul>
           </div>
-          <div class="hero-panel__body">
-            <!-- Operators -->
-            <div class="hero-panel__content active" id="panel-operators">
-              <p class="hero-panel__section-label">Inputs we need</p>
-              <ul class="hero-panel__list">
-                <li class="hero-panel__item">Intake window(s) and volume band</li>
-                <li class="hero-panel__item">Specs: NCV, chlorine, moisture, particle size</li>
-                <li class="hero-panel__item">Delivery constraints and packaging requirements</li>
-              </ul>
-              <p class="hero-panel__section-label">What you get</p>
-              <ul class="hero-panel__list">
-                <li class="hero-panel__item">Pre-aligned counterparties matching your window and specs</li>
-                <li class="hero-panel__item">Ongoing alignment as availability shifts</li>
-                <li class="hero-panel__item">Weekly brief on confirmed coverage and open asks</li>
-              </ul>
-            </div>
-            <!-- Suppliers -->
-            <div class="hero-panel__content" id="panel-suppliers">
-              <p class="hero-panel__section-label">Inputs we need</p>
-              <ul class="hero-panel__list">
-                <li class="hero-panel__item">Available window(s) and volume band</li>
-                <li class="hero-panel__item">Specs: NCV, chlorine, moisture, particle size</li>
-                <li class="hero-panel__item">Lane constraints and handoff conditions</li>
-              </ul>
-              <p class="hero-panel__section-label">What you get</p>
-              <ul class="hero-panel__list">
-                <li class="hero-panel__item">Matched intake windows aligned to your availability</li>
-                <li class="hero-panel__item">Spec pre-check before counterparties commit resources</li>
-                <li class="hero-panel__item">Handoff coordination for smooth lane execution</li>
-              </ul>
-            </div>
+          <!-- Suppliers -->
+          <div class="hero-panel__content" id="panel-suppliers">
+            <p class="hero-panel__section-label">Inputs we need</p>
+            <ul class="hero-panel__list">
+              <li class="hero-panel__item">Available window(s) and volume band</li>
+              <li class="hero-panel__item">Specs: NCV, chlorine, moisture, particle size</li>
+              <li class="hero-panel__item">Lane constraints and handoff conditions</li>
+            </ul>
+            <p class="hero-panel__section-label">What you get</p>
+            <ul class="hero-panel__list">
+              <li class="hero-panel__item">Matched intake windows aligned to your availability</li>
+              <li class="hero-panel__item">Spec pre-check before counterparties commit resources</li>
+              <li class="hero-panel__item">Handoff coordination for smooth lane execution</li>
+            </ul>
           </div>
         </div>
       </div>
