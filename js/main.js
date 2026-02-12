@@ -19,6 +19,12 @@
     } else {
       topbar.classList.remove('scrolled');
     }
+    // Hide on scroll down, show on scroll up
+    if (y > lastScroll && y > 100) {
+      topbar.classList.add('topbar--hidden');
+    } else if (y < lastScroll) {
+      topbar.classList.remove('topbar--hidden');
+    }
     lastScroll = y;
   }
   window.addEventListener('scroll', onScroll, { passive: true });

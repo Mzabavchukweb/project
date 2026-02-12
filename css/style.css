@@ -194,6 +194,10 @@ textarea {
   transition: all var(--transition);
 }
 
+.topbar--hidden {
+  transform: translateY(-100%);
+}
+
 .topbar__inner {
   display: flex;
   align-items: center;
